@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TipCalculator.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="10"
+            Padding="10,0">
+            
+            <Label Text="Bill Amount" 
+                   TextColor="MidnightBlue" HorizontalOptions="Center" FontSize="Large"
+                   Margin="10,10"/>
+            <Entry x:Name="bill" Keyboard="Numeric"/>
+
+            <Label Text="Gratuity Amount" 
+                   TextColor="MidnightBlue" HorizontalOptions="Center" FontSize="Large"
+                   Margin="20,20"/>
+            
+            
+            <Button Text="Calculate 15% Tip" Clicked="btn15_OnClicked"
+                    BackgroundColor="MidnightBlue" HorizontalOptions="Center" />
+                <Label x:Name="lbl15" Text="0" 
+                       FontAttributes="Bold" TextColor="Red" 
+                       FontSize="Medium" HorizontalOptions="Center"/>
+            
+            <Button Text="Calculate 20% Tip" Clicked="Btn20_OnClicked"
+                    BackgroundColor="MidnightBlue" HorizontalOptions="Center"/>
+                <Label x:Name="lbl20" Text="0" 
+                       FontAttributes="Bold" TextColor="Orange" 
+                       FontSize="Medium" HorizontalOptions="Center"/>   
+            
+            <Button Text="Calculate 25% Tip" Clicked="Btn25_OnClicked"
+                    BackgroundColor="MidnightBlue" HorizontalOptions="Center"/>
+                <Label x:Name="lbl25" Text="0" 
+                       FontAttributes="Bold" TextColor="Green" 
+                       FontSize="Medium" HorizontalOptions="Center"/>
+            
+            
+            <Button Text="Clear" Clicked="Clear_OnClicked"
+                    BackgroundColor="DarkRed" />
+            
+            <Label x:Name="lbltip" Text="Tip:"
+                   TextColor="MidnightBlue" FontSize="Large" FontAttributes="Bold"/>  
+            <Label x:Name="lbltotal" Text="Total:"
+                   TextColor="MidnightBlue" FontSize="Large" FontAttributes="Bold"/>
+
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
